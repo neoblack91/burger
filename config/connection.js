@@ -1,14 +1,14 @@
-const mysql = require('mysql');
-require("dotenv").config()
+const mysql = require("mysql");
+require("dotenv").config();
 // console.log = process.env.SECPASSWORD
 
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: "localhost",
   port: 3306,
-  user: 'root',
+  user: "root",
   password: process.env.SECPASSWORD,
-  database: 'burgers_db',
-})
+  database: "burgers_db",
+});
 
 connection.connect((err) => {
   if (err) {

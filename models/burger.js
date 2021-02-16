@@ -11,6 +11,9 @@ const burger = {
   update(objColVals, condition, cb) {
     orm.update("burger", objColVals, condition, (res) => cb(res));
   },
+  delete(condition, cb) {
+    orm.delete("burger", condition, (res) => cb(res));
+  },
 };
 
 // Export the database functions for the controller (catsController.js).

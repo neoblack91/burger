@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           devoured: newEat,
         };
 
-        fetch(`/api/burgers/${id}`, {
+        fetch(`/api/burger/${id}`, {
           method: "PUT",
           headers: {
             Accept: "application/json",
