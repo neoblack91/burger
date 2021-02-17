@@ -1,28 +1,41 @@
-<h1>
-  Burger Town
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1 class="display-4">Burger Town</h1>
+    <p class="lead">Won't you take me to BurgerTown?</p>
+  </div>
+</div>
 
-
-</h1>
-
+<div class="card" style="width: 18rem">
+  <img src="public/assets/img/JuicyHamburgers7.jpg" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burgers/burger-block }}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
 <h2>Burger is Saved</h2>
 
-<ul>
-  {{#each burgers}}
-  {{#unless Devoured}}
-  {{> burgers/burger-block Devoured=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
 
-<h2>Burger is Devoured!</h2>
+<div class="card" style="width: 18rem">
+  <img src="public/assets/img/JuicyHamburgers7.jpg" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h2>Burger is Devoured!</h2>
 
-<ul>
-  {{#each burgers}}
-  {{#if Devoured}}
-  {{> burger/burger-block Devoured=false}}
-  {{/if}}
-  {{/each}}
-</ul>
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block }}
+      {{/if}}
+      {{/each}}
+    </ul>
+
+  </div>
+</div>
+
 
 <h2>Eat a Burger</h2>
 <form id="create-form">
