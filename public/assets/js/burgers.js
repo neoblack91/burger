@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   // UPDATE
-  const changeEatBtns = document.querySelectorAll(".change-eat");
+  const changeEatBtns = document.querySelectorAll(".change-Devoured");
 
   // Set up the event listener for the create button
   if (changeEatBtns) {
@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         console.log("test");
         // Grabs the id of the element that goes by the name, "id"
         const id = e.target.getAttribute("data-id");
-        const newEat = e.target.getAttribute("data-newEat");
-
+        const newEat = true;
         const newEatState = {
           devoured: newEat,
         };
@@ -52,11 +51,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
       // Grabs the value of the textarea that goes by the name, "quote"
       const newBurger = {
         name: document.getElementById("br").value.trim(),
-        devoured: document.getElementById("devoured"),
+        // devoured: document.getElementById("devoured"),
       };
 
       // Send POST request to create a new quote
-      fetch("/api/burgers", {
+      fetch("/api/burger", {
         method: "POST",
         headers: {
           Accept: "application/json",
