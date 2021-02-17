@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   if (changeEatBtns) {
     changeEatBtns.forEach((button) => {
       button.addEventListener("click", (e) => {
-        console.log("test");
+        // console.log("test");
         // Grabs the id of the element that goes by the name, "id"
         const id = e.target.getAttribute("data-id");
         const newEat = true;
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           // Check that the response is all good
           // Reload the page so the user can see the new quote
           if (response.ok) {
-            console.log(`changed eat to: ${newEat}`);
+            // console.log(`changed eat to: ${newEat}`);
             location.reload("/");
           } else {
             alert("something went wrong!");
@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
       }).then(() => {
         // Empty the form
         document.getElementById("br").value = "";
-        console.log(fetch);
+        // console.log(fetch);
         // Reload the page so the user can see the new quote
-        console.log("Created a new burger!");
+        // console.log("Created a new burger!");
         location.reload();
       });
     });
@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       fetch(`/api/burger/${id}`, {
         method: "DELETE",
       }).then((res) => {
-        console.log(res);
-        console.log(`Deleted burger: ${id}`);
+        // console.log(res);
+        // console.log(`Deleted burger: ${id}`);
 
         // Reload the page
         location.reload();
