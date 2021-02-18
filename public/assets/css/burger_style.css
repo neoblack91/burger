@@ -1,5 +1,15 @@
+/* html {
+  background-color: red;
+} */
+
 body {
-  background-color: aqua;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 li {
   padding: 10px;
@@ -12,11 +22,28 @@ li {
 }
 
 .create-update-form {
+  text-align: center;
   padding: 7px;
   margin: 7px;
-  background: rgb(0, 255, 76);
+  background: rgb(255, 72, 0);
 }
 
+h2 {
+  text-align: center;
+}
 .form-group {
-  margin-bottom: 5px;
+  text-align: center;
+}
+button {
+  text-align: center;
+}
+
+.jumbotron {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }

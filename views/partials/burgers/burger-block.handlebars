@@ -2,7 +2,7 @@
 	{{burger_name}}
 	{{#unless devoured}}
 	<button class="change-Devoured" data-id="{{id}}" data-neweat="{{devoured}}">
-		EAT ME!!
+		{{#if devoured}} YUMM ANOTHER ONE!!!{{else}} EAT ME!!! {{/if}}
 	</button>
 	{{/unless}}
 	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>

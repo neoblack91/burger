@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("br").value = "";
         // console.log(fetch);
         // Reload the page so the user can see the new quote
-        // console.log("Created a new burger!");
+        console.log("Created a new burger!");
         location.reload();
       });
     });
@@ -86,9 +86,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       fetch(`/api/burger/${id}`, {
         method: "DELETE",
       }).then((res) => {
-        // console.log(res);
-        // console.log(`Deleted burger: ${id}`);
-
         // Reload the page
         location.reload();
       });

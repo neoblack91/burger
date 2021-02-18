@@ -13,17 +13,18 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burger", (req, res) => {
-  // console.log(req.body);
-  // console.log("hello");
-  burger.create(["burger_name"], [req.body.name], (result) => {
-    // Send back the ID of the new quote
-    res.json({ id: result.insertId });
-  });
+  burger.create(
+    ["burger_name", "devoured"],
+    [req.body.name, false],
+    (result) => {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    }
+  );
 });
 
 router.put("/api/burger/:id", (req, res) => {
   const condition = `id = ${req.params.id}`;
-  // console.log("devoured is", req.body.devoured);
   burger.update(
     {
       devoured: req.body.devoured,
