@@ -3,7 +3,7 @@ require("dotenv").config();
 // console.log = process.env.SECPASSWORD;
 
 if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(rocess.env.JAWSDB_URL);
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
     host: "localhost",
